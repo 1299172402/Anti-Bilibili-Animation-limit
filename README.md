@@ -346,6 +346,8 @@ Press Enter to exit.
 
 ### app的测试结果
 
+referer：https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/other/API_auth.md
+
 ```python
     #url = "https://app.bilibili.com/x/playurl"
     url = "https://1735831202235667.cn-hongkong.fc.aliyuncs.com/2016-08-15/proxy/bililimit/removelimit/"
@@ -379,4 +381,97 @@ Press Enter to exit.
     print(url)
     print(res)
 
+```
+
+app的参数表
+
+link: https://github.com/1299172402/Anti-Bilibili-Animation-limit/blob/main/get_access_key.py
+
+main()获得access_key
+
+test()测试用
+
+```
+https://app.bilibili.com/x/playurl?
+access_key=c336c3669686a5c264ed64e651c63c71 验证密钥
+aid=99999999
+appkey=iVGUTjsxvpLeuDCf 扫码后登录可以得到
+build=5370000 
+#build      | num  | 版本         | APP方式必要 | 可为`6082000` |
+buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5
+      XY412F34F7C09E5D417D5BDACC727A3258263
+#| buvid  | str  | 设备ID  | 非必要 | 为操作登录接口时Cookie中的`buvid3`可为任意值 |
+从https://www.bilibili.com/h5/validate/device的f12
+https://api.bilibili.com/x/safecenter/user_devices?csrf=a16ee5026cdb94845b29b759d75aeb71&local_id=342abf29fedaf70e5758b0340c62c122&bili_local_id=C156972D961DB1F4B66177FFA555CDF2201909102109189BD41BD05E8324BD29的查询
+cid=171776208
+device=android
+expire=1597289802
+| expire        | num  | 到期时间？           | 时间戳？<br />作用尚不明确    
+fnval=0
+fnver=0
+force_host=0
+mid=174438027
+目标用户uid
+http://api.bilibili.com/x/web-interface/view?aid=xxxxxx可以查询
+mobi_app=android
+npcybs=0
+otype=json
+platform=android
+qn=32
+ts=1594974158 
+sign=b10febf17d65fb76cd3102006ef8318f
+
+这个你要先给参数按照key排序，再计算。
+
+https://app.bilibili.com/x/playurl?access_key=c336c3669686a5c264ed64e651c63c71&aid=99999999&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5&cid=171776208&device=android&expire=1597289802&fnval=16&fnver=0&force_host=0&mid=174438027&mobi_app=android&npcybs=0&otype=json&platform=android&qn=32&ts=1594974158&sign=b10febf17d65fb76cd3102006ef8318f
+
+Welcome to Bilibili Animation Download
+Creative By ZhiyuShang With LOVE
+[Referer](https://github.com/1299172402/AnimeDownload)
+md: 28230147
+https://api.bilibili.com/pgc/web/season/section?season_id=34643
+{'aid': 627455788, 'cid': 253193011, 'title': '01 伯爵的犯罪'}
+{'aid': 457466778, 'cid': 246625128, 'title': '02 緋色之瞳 第一幕'}
+{'aid': 627592518, 'cid': 248726680, 'title': '03 緋色之瞳 第二幕'}
+{'aid': 202532216, 'cid': 250890489, 'title': '04 稀少的種子'}
+{'aid': 457700991, 'cid': 253081767, 'title': '05 橋上的舞者'}
+{'aid': 800316414, 'cid': 255348592, 'title': '06 諾亞提克號事件 第一幕'}
+{'aid': 372823745, 'cid': 257739968, 'title': '07 諾亞提克號事件 第二幕'}
+{'aid': 542949771, 'cid': 260195069, 'title': '08 夏洛克 · 福爾摩斯的研究 第一幕'}
+{'aid': 670619534, 'cid': 262674687, 'title': '09 夏洛克 · 福爾摩斯的研究 第二幕'}
+{'aid': 458077121, 'cid': 265355153, 'title': '10 兩名偵探 第一幕'}
+{'aid': 330713495, 'cid': 268029852, 'title': '11 兩名偵探 第二幕'}
+
+
+C:\Users\2184232017>python D:\HHT\SimpleCoding\tv.danmaku.bili\get_access_key.py
+------ QRcodeURL BEGIN ------
+https://passport.bilibili.com/x/passport-tv-login/h5/qrcode/auth?auth_code=6dc710c01527b618beb93c384bfafb01
+------ QRcodeURL END ------
+[auth_code] 6dc710c01527b618beb93c384bfafb01
+Are you scan finished?[Enter]
+[uid] 498766638
+[access_key] 3a4d835fac7cc6cc12b98325b53020c1
+[refresh_token] 99bc2f500ea99f248f2d787439160fc1
+
+
+
+
+One Room
+Welcome to Bilibili Animation Download
+Creative By ZhiyuShang With LOVE
+[Referer](https://github.com/1299172402/AnimeDownload)
+md: 28230234
+https://api.bilibili.com/pgc/web/season/section?season_id=34715
+{'aid': 884840446, 'cid': 244951054, 'title': '01 琴川晶很亲切'}
+{'aid': 842418806, 'cid': 244948454, 'title': '02 琴川晶很在意'}
+{'aid': 800023156, 'cid': 247319897, 'title': '03 琴川晶没有说'}
+{'aid': 202548488, 'cid': 249710071, 'title': '04 琴川晶培育中'}
+{'aid': 372627787, 'cid': 251947200, 'title': '05 桃原奈月要说服'}
+{'aid': 797687309, 'cid': 254365005, 'title': '06 七桥御乃梨向前迈步'}
+{'aid': 585359497, 'cid': 256453542, 'title': '07 织崎纱耶要谢罪'}
+{'aid': 885402308, 'cid': 258959056, 'title': '08 织崎纱耶在应援'}
+{'aid': 585419844, 'cid': 261411032, 'title': '09 织崎纱耶察觉到'}
+{'aid': 628109165, 'cid': 263963363, 'title': '10 织崎纱耶打扰了'}
+{'aid': 203171289, 'cid': 266627051, 'title': '11 花坂结衣吓一跳'}
+{'aid': 843218847, 'cid': 269269571, 'title': '12 花坂结衣在身边'}
 ```
