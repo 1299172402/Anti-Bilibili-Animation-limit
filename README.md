@@ -30,7 +30,12 @@ image
 
 ![](https://user-images.githubusercontent.com/8595983/102782087-da600200-43ec-11eb-9239-200a23022bfb.png)
 
-#### 6.进入你的function后把index.php用这个链接里的内容覆盖（覆盖后记得保存！！！Save）：https://raw.githubusercontent.com/zzc10086/grocery_store/master/bili_proxy/aliyun_Serverless_BPplayurl.php
+#### 6.进入你的function后把index.php用这个链接里的内容覆盖（覆盖后记得保存！！！Save）：
+
+https://raw.githubusercontent.com/zzc10086/grocery_store/master/bili_proxy/aliyun_Serverless_BPplayurl.php
+
+https://github.com/zzc10086/grocery_store/blob/master/bili_proxy/BPplayurl.php
+
 image
 
 ![](https://user-images.githubusercontent.com/8595983/102782241-24e17e80-43ed-11eb-9b66-e12e32f0ac8c.png)
