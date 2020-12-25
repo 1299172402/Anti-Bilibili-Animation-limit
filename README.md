@@ -53,6 +53,8 @@ image
 ![](https://user-images.githubusercontent.com/8595983/102782466-80ac0780-43ed-11eb-80eb-aad238b6943e.png)
 阿里云提供每个月100万次免费计算，测试了下看一个视频用了10次计算左右所以肯定是用不完了……（流量会收费，海外阿里云是0.117美刀/GB，解析一次地址就几十kb，用量应该是非常少的）
 
+#### 9.把这个地址放入哔哩漫游的香港服务器中（去除https://）
+
 ## 3.仅使用app的解决办法
 
 仿照 https://github.com/SocialSisterYi/bilibili-API-collect/issues/24#issuecomment-659955015 建立
