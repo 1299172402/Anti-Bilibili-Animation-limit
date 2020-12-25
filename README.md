@@ -61,6 +61,8 @@ https://app.bilibili.com/x/playurl?access_key=c336c3669686a5c264ed64e651c63c71&a
 
 
 
+
+
 ### 阿里云测试结果
 
 阿里云的办法可以支持获取非2020年10月番剧的下载地址，测试了不分段flv地址，可以下载
@@ -341,3 +343,40 @@ Press Enter to exit.
 但根据其他人的测试哔哩哔哩在前端js里可能添加了识别当前ip的脚本导致无法在网页上播放。
 可以尝试禁用那一段js，或者通过扩展修改js。
 
+
+### app的测试结果
+
+```python
+    #url = "https://app.bilibili.com/x/playurl"
+    url = "https://1735831202235667.cn-hongkong.fc.aliyuncs.com/2016-08-15/proxy/bililimit/removelimit/"
+    ts = int(time.time())
+    #body = f"aid=669904231&access_key=35f17e127a90ef4a3067df5a66b278c1&cid=243833780&device=android&fnval=0&fnver=0&mobi_app=android&npcybs=0&otype=json&platform=android&qn=80&ts={ts}"
+    
+    # 测试中 忧国的莫里亚蒂（限定） 第一集-魔改（失败）
+    #body = f"access_key=3a4d835fac7cc6cc12b98325b53020c1&aid=627455788&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XY412F34F7C09E5D417D5BDACC727A3258263&cid=253193011&device=android&expire=1597289802&fnval=0&fnver=0&force_host=0&mid=688418886&mobi_app=android&npcybs=0&otype=json&platform=android&qn=80&ts={ts}"
+    
+    # 测试中 忧国的莫里亚蒂（限定） 第一集-类似改（失败）
+    #body = "access_key=c336c3669686a5c264ed64e651c63c71&aid=627455788&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5&cid=253193011&device=android&expire=1597289802&fnval=0&fnver=0&force_host=0&mid=688418886&mobi_app=android&npcybs=0&otype=json&platform=android&qn=112&ts=1594974158"
+    # 测试中 在魔王城说晚安（限定） 第十一集-类似改（失败）有可能是body不对
+    #body = "access_key=c336c3669686a5c264ed64e651c63c71&aid=330714489&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5&cid=266547816&device=android&expire=1597289802&fnval=0&fnver=0&force_host=0&mid=688418886&mobi_app=android&npcybs=0&otype=json&platform=android&qn=112&ts=1594974158"
+    #res = {'code': -404, 'message': '啥都木有', 'ttl': 1, 'data': None}(有可能是国家不对)
+
+    # succeed 原始
+    #body = "access_key=c336c3669686a5c264ed64e651c63c71&aid=99999999&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5&cid=171776208&device=android&expire=1597289802&fnval=0&fnver=0&force_host=0&mid=174438027&mobi_app=android&npcybs=0&otype=json&platform=android&qn=112&ts=1594974158"
+    
+    # succeed oneroom第三季第一集(国内)
+    #body = "access_key=c336c3669686a5c264ed64e651c63c71&aid=884840446&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5&cid=244951054&device=android&expire=1597289802&fnval=0&fnver=0&force_host=0&mid=928123&mobi_app=android&npcybs=0&otype=json&platform=android&qn=112&ts=1594974158"
+    #res = {'code': -404, 'message': '啥都木有', 'ttl': 1, 'data': None} (国外网址)
+    #res = {xxx}（国内网址，可以正常解析）
+
+    # 出租女友（香港可以） av456273732  md: 28229298
+    #body = "access_key=c336c3669686a5c264ed64e651c63c71&aid=456273732&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5&cid=222747655&device=android&expire=1597289802&fnval=0&fnver=0&force_host=0&mid=11783021&mobi_app=android&npcybs=0&otype=json&platform=android&qn=112&ts=1594974158"
+    # 香港ali实验成功！！！！
+
+    body_result = CalcSign("iVGUTjsxvpLeuDCf", "aHRmhWMLkdeMuILqORnYZocwMBpMEOdt", body)
+    url = url + "?" + body_result
+    res = json.loads(requests.get(url).text)
+    print(url)
+    print(res)
+
+```
