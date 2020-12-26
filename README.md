@@ -55,11 +55,21 @@ image
 
 #### 9.把这个地址放入哔哩漫游的香港服务器中（去除https://）
 
+#### 测试结果
+
+https://github.com/1299172402/Anti-Bilibili-Animation-limit#阿里云测试结果
+
 ## 3.仅使用app的解决办法
 
 仿照 https://github.com/SocialSisterYi/bilibili-API-collect/issues/24#issuecomment-659955015 的地址建立
 
 https://app.bilibili.com/x/playurl?access_key=xxxxx3669686a5c264ed64e651c63c71&aid=99999999&appkey=iVGUTjsxvpLeuDCf&build=5370000&buvid=XXD9E43D7A1EBB6669597650E3EE417D9E7F5&cid=171776208&device=android&expire=1597289802&fnval=16&fnver=0&force_host=0&mid=174438027&mobi_app=android&npcybs=0&otype=json&platform=android&qn=32&ts=1594974158&sign=b10febf17d65fb76cd3102006ef8318f
+
+B站似乎很信任来自app端的请求，即使timestamp与现在时间相差很远，access_key有点特别，但只要sign校验成功，就可以播放。（但是对于区域还是有所限制）
+
+#### 测试结果
+
+https://github.com/1299172402/Anti-Bilibili-Animation-limit#app的测试结果
 
 
 
