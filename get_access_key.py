@@ -57,7 +57,7 @@ def main():
 
 def test():
     #url = "https://app.bilibili.com/x/playurl"
-    url = "https://1735831202235667.cn-hongkong.fc.aliyuncs.com/2016-08-15/proxy/bililimit/removelimit/"
+    url = "https://xxxxxxxxxxxxxx.cn-hongkong.fc.aliyuncs.com/2016-08-15/proxy/bili/removelimit/"
     ts = int(time.time())
     #body = f"aid=669904231&access_key=35f17e127a90ef4a3067df5a66b278c1&cid=243833780&device=android&fnval=0&fnver=0&mobi_app=android&npcybs=0&otype=json&platform=android&qn=80&ts={ts}"
     
